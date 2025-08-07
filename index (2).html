@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Камила, любовь моя</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(180deg, #1a001a, #330033);
+      color: #f8e1f4;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 100px 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 3em;
+      color: #ffd6f5;
+      text-shadow: 0 0 10px #ff99cc;
+      margin-bottom: 60px;
+    }
+    .verse {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    .verse:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .chorus {
+      margin: 60px 0;
+      padding: 20px;
+      border-left: 4px solid #ff99cc;
+      background-color: rgba(255, 255, 255, 0.05);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 80px;
+      font-style: italic;
+      color: #ffb3d9;
+      font-size: 1.2em;
+    }
+    .signature {
+      font-family: 'Cinzel', serif;
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+    .petal {
+      position: fixed;
+      top: -50px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle at center, #ffb6c1 0%, #ff69b4 80%);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/y59p9h.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает воспроизведение музыки.
+  </audio>
+  <script>
+    const petalCount = 30;
+    for (let i = 0; i < petalCount; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = 5 + Math.random() * 5 + 's';
+      petal.style.animationDelay = Math.random() * 5 + 's';
+      petal.style.transform = `translateY(0) rotate(${Math.random() * 360}deg)`;
+      document.body.appendChild(petal);
+    }
+  </script>
+  <div class="container">
+    <h1>Камила, любовь моя</h1>
+    <div class="verse">
+      <p>Камила, родная, послушай меня,</p>
+      <p>Я пишу не как поэт — от сердца, любя.</p>
+      <p>Хочу извиниться за всё, что не так,</p>
+      <p>За грубые фразы, за каждый пустяк…</p>
+    </div>
+    <div class="verse">
+      <p>Ты знаешь меня — бывает вспылил,</p>
+      <p>Не подумал, сказал… а потом затупил.</p>
+      <p>Но нет важней тебя в моей судьбе —</p>
+      <p>Я правда сожалею, и тянет к тебе.</p>
+    </div>
+    <div class="verse">
+      <p>С тобой — всё иначе, тепло и легко:</p>
+      <p>Прогулки, уют и вечерний покой…</p>
+      <p>Болтаем, смеёмся, и снова в бою —</p>
+      <p>Brawl Stars без пауз, и мы — как в строю.</p>
+    </div>
+    <div class="verse">
+      <p>Ты щипаешь, кусаешь — и я улыбаюсь,</p>
+      <p>От твоей энергии я будто летаю.</p>
+      <p>А после еды — лежим, как мешки,</p>
+      <p>Животы набиты, но счастливы мы.</p>
+    </div>
+    <div class="verse">
+      <p>Массаж я тебе делаю с нежной душой,</p>
+      <p>С заботой, с любовью, с надеждой большой.</p>
+      <p>Хочу, чтоб ты знала: ты — мой человек,</p>
+      <p>С тобой каждый день — как любимый сюжет.</p>
+    </div>
+    <div class="verse">
+      <p>Ты — моя радость, мой свет, мой уют,</p>
+      <p>Тебя мои чувства назад не спугнут.</p>
+      <p>Я понял ошибки, я стал понимать,</p>
+      <p>Что главное — взять и просто обнять</p>
+    </div>
+    <div class="verse">
+      <p>Ты — свет и опора, ты — часть меня,</p>
+      <p>Люблю тебя сильно, и это — не зря.</p>
+      <p>Пусть будут и дальше моменты такие —</p>
+      <p>Где мы — настоящие, живые, родные.</p>
+    </div>
+    <div class="chorus">
+      <p>If you hold me without hurting me,</p>
+      <p>You’ll be the first who ever did.</p>
+      <p>There’s things I wanna say to you, but I’ll just let you live,</p>
+      <p>Like if you hold me without hurting me,</p>
+      <p>You’ll be the first who ever did.</p>
+    </div>
+    <div class="footer">
+      <p>От сердца, навсегда твой,</p>
+      <div class="signature">Эмир</div>
+    </div>
+  </div>
+</body>
+</html>
